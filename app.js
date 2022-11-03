@@ -7,6 +7,10 @@ const rootDir = require('./util/path');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+// Set where the views files are
+app.set('views', 'views');
+
 // add this to be able to parse res.body
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
